@@ -1,0 +1,285 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 85%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.number__break {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-direction: row;
+  margin: 10rem auto 4.5rem;
+}
+.number__break .number__break-number {
+  position: relative;
+  padding: 1.25rem;
+  border: 0.05rem solid hsl(240, 18%, 85%);
+  border-radius: 50%;
+  color: hsl(240, 10%, 57%);
+  font-weight: 700;
+  z-index: 100;
+  background-color: hsl(0, 0%, 98%);
+}
+.number__break .number__break-number::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -5rem;
+  width: 0.05rem;
+  height: 5rem;
+  background-color: hsl(240, 18%, 85%);
+  z-index: 2;
+  transform: translate(-50%);
+}
+
+.regular__text {
+  color: hsl(240, 10%, 57%);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.h2__heading, .about-us .about-us__title-green {
+  margin: 2rem auto;
+  width: 90%;
+  font-weight: 750;
+  font-size: 2.25rem;
+  text-align: center;
+  line-height: 1;
+  color: hsl(240, 21%, 20%);
+}
+
+.text-color-white {
+  color: hsl(0, 0%, 98%);
+}
+
+.logo {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.heading__img-center {
+  position: relative;
+  min-width: 110%;
+  left: -5%;
+}
+
+.heading__img-left,
+.heading__img-right {
+  display: none;
+}
+
+.heading__text-area {
+  margin: 3rem auto;
+}
+.heading__text-area .heading__header {
+  width: 80%;
+  margin: 0 auto 2rem;
+  font-size: 2.75rem;
+  font-weight: 850;
+  text-align: center;
+  line-height: 1;
+  color: hsl(240, 21%, 20%);
+}
+
+.heading__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-direction: column;
+  margin: 2rem;
+}
+.heading__buttons .btn-download {
+  padding: 1.25rem 2.75rem;
+  border: none;
+  border-radius: 100px;
+  background-color: hsl(192, 37%, 48%);
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.heading__buttons .btn-download .heading__btn-text-green {
+  color: hsl(192, 90%, 77%);
+}
+.heading__buttons .btn-download:hover,
+.heading__buttons .btn-download:focus {
+  opacity: 0.75;
+}
+.heading__buttons .btn-what-is-it {
+  padding: 1.25rem 2.75rem;
+  border: none;
+  border-radius: 100px;
+  background-color: hsl(268, 34%, 53%);
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+  transition: opacity 0.3s;
+  cursor: pointer;
+  padding: 1.25rem 2.25rem;
+}
+.heading__buttons .btn-what-is-it:hover,
+.heading__buttons .btn-what-is-it:focus {
+  opacity: 0.75;
+}
+
+.images__section .images__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+.images__section .images__container .images__img {
+  border-radius: 1rem;
+}
+
+.about-us {
+  width: 100%;
+}
+.about-us .about-us__title-green {
+  margin-top: 4rem;
+  color: hsl(192, 37%, 48%);
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+}
+
+.contact {
+  position: relative;
+  margin-top: -6.35rem;
+  padding: 5rem 2rem;
+  background-image: url(../../starter-code/assets/mobile/image-footer.jpg);
+  background-position: top;
+  background-size: cover;
+  z-index: 10;
+}
+.contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+.contact .contact__btn-download {
+  padding: 1.25rem 2.75rem;
+  border: none;
+  border-radius: 100px;
+  background-color: hsl(268, 34%, 53%);
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+  transition: opacity 0.3s;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+.contact .contact__btn-download .contact__btn-text-purple {
+  color: hsl(268, 100%, 86%);
+}
+.contact .contact__btn-download:hover,
+.contact .contact__btn-download:focus {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(192, 37%, 48%);
+}
+.contact .contact__btn-download:hover .contact__btn-text-purple,
+.contact .contact__btn-download:focus .contact__btn-text-purple {
+  color: hsl(192, 90%, 77%);
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsla(192, 37%, 48%, 0.85);
+  z-index: -1;
+}
+
+@media screen and (min-width: 48rem) {
+  .container {
+    max-width: 32rem;
+  }
+  .heading__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-direction: row;
+  }
+  .images__section {
+    max-width: 76rem;
+    margin: 0 auto;
+  }
+  .images__section .images__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .heading .heading__img-center {
+    display: none;
+  }
+  .heading .heading__img-left,
+  .heading .heading__img-right {
+    display: block;
+    margin-top: -5rem;
+  }
+  .heading .heading__img-left {
+    margin-left: -3rem;
+  }
+  .heading .heading__img-right {
+    margin-right: -3rem;
+  }
+  .contact {
+    background-image: url(../../../starter-code/assets/desktop/image-footer.jpg);
+  }
+  .contact .container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .contact .container .flex-even {
+    flex: 1;
+    text-align: left;
+  }
+}/*# sourceMappingURL=style.css.map */

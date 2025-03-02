@@ -1,0 +1,55 @@
+// MEDIA FOR TABLET VIEW ..................
+
+@media screen and (min-width: 48rem) {
+	.container {
+		max-width: 32rem;
+	}
+
+	// heading text area
+	.heading__buttons {
+		@include flexCenter(row);
+	}
+	// images - change for 4 in a row
+	.images__section {
+		max-width: 76rem; //defines max width of img-line
+		margin: 0 auto;
+		.images__container {
+			@include grid(4);
+		}
+	}
+}
+
+@media screen and (min-width: 62rem) {
+	.heading {
+		@include flexCenter(row);
+		gap: 4rem;
+		// heading images
+		.heading__img-center {
+			display: none;
+		}
+		.heading__img-left,
+		.heading__img-right {
+			display: block;
+			margin-top: -5rem;
+		}
+		.heading__img-left {
+			margin-left: -3rem;
+		}
+		.heading__img-right {
+			margin-right: -3rem;
+		}
+		//heading text section
+	}
+	.contact {
+		background-image: url(../../../starter-code/assets/desktop/image-footer.jpg);
+		.container {
+			max-width: 100%;
+			@include flexCenter(row);
+			gap: 5rem;
+			.flex-even {
+				flex: 1;
+				text-align: left;
+			}
+		}
+	}
+}

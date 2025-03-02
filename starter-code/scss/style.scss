@@ -1,0 +1,209 @@
+@import './assets/reset';
+@import './assets/mixins';
+@import './assets/variables';
+
+// BASIC SETTINGS
+.main {
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+
+	font-family: 'Inter', sans-serif;
+}
+
+// number break between sections ........
+
+.number__break {
+	@include flexCenter(row);
+	margin: 10rem auto 4.5rem;
+	.number__break-number {
+		position: relative;
+		padding: 1.25rem;
+		border: 0.05rem solid $color-slate-300;
+		border-radius: 50%;
+		color: $color-slate-600;
+		font-weight: 700;
+		z-index: 100;
+		background-color: $color-white;
+	}
+	.number__break-number::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: -5rem;
+		width: 0.05rem;
+		height: 5rem;
+		background-color: $color-slate-300;
+		z-index: 2;
+		transform: translate(-50%);
+	}
+}
+// TEXT STYLES ........................
+// regular text styles
+.regular__text {
+	color: $color-slate-600;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: center;
+}
+
+// h2 header settings
+.h2__heading {
+	margin: 2rem auto;
+	width: 90%;
+	font-weight: 750;
+	font-size: 2.25rem;
+	text-align: center;
+	line-height: 1;
+
+	color: $color-slate-900;
+}
+
+// class changing text color to white
+.text-color-white {
+	color: $color-white;
+}
+
+// PAGE ELEMENTS ......................................
+
+// logo style
+
+.logo {
+	margin: 4rem auto;
+	text-align: center;
+}
+
+// heading section ..............
+
+// heading img for mobile
+.heading__img-center {
+	position: relative;
+	min-width: 110%;
+	left: -5%;
+}
+
+.heading__img-left,
+.heading__img-right {
+	display: none;
+}
+
+// heading settings............
+
+.heading__text-area {
+	margin: 3rem auto;
+
+	.heading__header {
+		width: 80%;
+		margin: 0 auto 2rem;
+
+		font-size: 2.75rem;
+		font-weight: 850;
+		text-align: center;
+		line-height: 1;
+		color: $color-slate-900;
+	}
+}
+// heading buttons ...............
+
+.heading__buttons {
+	@include flexCenter(column);
+	margin: 2rem;
+	.btn-download {
+		@include button($color-cyan-600);
+		.heading__btn-text-green {
+			color: $color-cyan-300;
+		}
+	}
+
+	.btn-download:hover,
+	.btn-download:focus {
+		opacity: 0.75;
+	}
+	.btn-what-is-it {
+		@include button($color-purple-600);
+		padding: 1.25rem 2.25rem;
+	}
+	.btn-what-is-it:hover,
+	.btn-what-is-it:focus {
+		opacity: 0.75;
+	}
+}
+
+// IMAGES SECTION - separated due to problem wit setting grid-template by mixin
+
+.images__section {
+	// images placed by grid mixin
+	.images__container {
+		@include grid(2);
+		.images__img {
+			border-radius: 1rem;
+			// object-fit: cover;
+		}
+	}
+}
+// ABOUT US SECTION ....................................
+
+.about-us {
+	width: 100%;
+
+	.about-us__title-green {
+		@extend .h2__heading;
+		margin-top: 4rem;
+
+		color: $color-cyan-600;
+		font-size: 1rem;
+		letter-spacing: 0.25rem;
+		text-transform: uppercase;
+	}
+}
+
+// CONTACT SECTION ................
+
+.contact {
+	position: relative;
+	margin-top: -6.35rem;
+	padding: 5rem 2rem;
+	background-image: url(../../starter-code/assets/mobile/image-footer.jpg);
+	background-position: top;
+	background-size: cover;
+	z-index: 10; //added for number__break class
+
+	// flex for content of contact section
+
+	.container {
+		@include flexCenter(column);
+	}
+
+	// button for contact section
+
+	.contact__btn-download {
+		@include button($color-purple-600);
+		transition: color 0.3s, background-color 0.3s;
+
+		.contact__btn-text-purple {
+			color: $color-purple-300;
+		}
+	}
+	.contact__btn-download:hover,
+	.contact__btn-download:focus {
+		background-color: $color-white;
+		color: $color-cyan-600;
+		.contact__btn-text-purple {
+			color: $color-cyan-300;
+		}
+	}
+}
+// green background for contact
+.contact::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: $color-cyan-600-transparent;
+	z-index: -1;
+}
+
+// media queries import
+@import './assets/media';
