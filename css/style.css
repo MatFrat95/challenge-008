@@ -172,7 +172,7 @@ img {
   position: relative;
   margin-top: -6.35rem;
   padding: 5rem 2rem;
-  background-image: url(../../starter-code/assets/mobile/image-footer.jpg);
+  background-image: url(../starter-code/assets/mobile/image-footer.jpg);
   background-position: top;
   background-size: cover;
   z-index: 10;
@@ -232,7 +232,7 @@ img {
     flex-direction: row;
   }
   .images__section {
-    max-width: 76rem;
+    max-width: 68rem;
     margin: 0 auto;
   }
   .images__section .images__container {
@@ -267,7 +267,7 @@ img {
     margin-right: -3rem;
   }
   .contact {
-    background-image: url(../../../starter-code/assets/desktop/image-footer.jpg);
+    background-image: url(../../starter-code/assets/desktop/image-footer.jpg);
   }
   .contact .container {
     max-width: 100%;

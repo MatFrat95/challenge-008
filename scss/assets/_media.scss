@@ -11,7 +11,7 @@
 	}
 	// images - change for 4 in a row
 	.images__section {
-		max-width: 76rem; //defines max width of img-line
+		max-width: 68rem; //defines max width of img-line
 		margin: 0 auto;
 		.images__container {
 			@include grid(4);
@@ -41,7 +41,7 @@
 		//heading text section
 	}
 	.contact {
-		background-image: url(../../../starter-code/assets/desktop/image-footer.jpg);
+		background-image: url(../../starter-code/assets/desktop/image-footer.jpg);
 		.container {
 			max-width: 100%;
 			@include flexCenter(row);
