@@ -23,6 +23,10 @@ img {
   font-family: "Inter", sans-serif;
 }
 
+.hidden-element {
+  display: none;
+}
+
 .number__break {
   display: flex;
   justify-content: center;
