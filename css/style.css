@@ -100,7 +100,7 @@ img {
 .heading__text-area .heading__header {
   width: 80%;
   margin: 0 auto 2rem;
-  font-size: 2.75rem;
+  font-size: clamp(2.75rem, 4vw, 5rem);
   font-weight: 850;
   text-align: center;
   line-height: 1;
